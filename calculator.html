@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        #border{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #calc-border{
+            height: 55vh;
+            width: 39.5vw;
+            border: solid 5px black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow:20px 20px 10px grey; 
+            background: rgb(54, 49, 49);
+            border-radius: 10px;
+        }
+        #input{
+            width: 38vw;
+            height: 10.5vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 4px; 
+            margin-top: 4px;
+        }
+        #input>input{
+            width: 38vw;
+            height: 10.5vh;
+            font-size: 32px;
+        }
+        #sub{ 
+            width: 28vw;
+        }
+        .rows{
+            display: flex;
+            margin: 1px;
+        }
+        .btn{
+            width: 9.5vw;
+            height: 8vh;
+            margin: 1px;
+        }
+        .btn>button{
+            width: 9.5vw;
+            height: 8vh;
+            background:  rgb(217, 226, 221);
+        }
+        button:hover{
+            background: rgb(22, 104, 58);
+        }
+        button:active{
+            background: springgreen;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="border">
+    
+        <div id="calc-border">
+
+            <div id="input">
+                <input type="text" placeholder="Enter Here" id="txt" onkeypress="return isNumberKey(event)">
+            </div>
+            
+            <div class="rows">
+
+                <div class="btn" ><button  onclick="display(this)">0</button></div>
+                <div class="btn"><button  onclick="display(this)">.</button></div>
+                <div class="btn"><button  onclick="display(this)">*</button></div>
+                <div class="btn"><button  onclick="display(this)">/</button></div>
+                
+            </div>
+
+
+            <div class="rows">
+                <div class="btn"><button  onclick="display(this)">9</button></div>
+                <div class="btn"><button  onclick="display(this)">8</button></div>
+                <div class="btn"><button  onclick="display(this)">7</button></div>
+                <div class="btn"><button  onclick="display(this)">-</button></div>
+            </div>
+
+
+            <div class="rows">
+                <div class="btn"><button  onclick="display(this)">4</button></div>
+                <div class="btn"><button  onclick="display(this)">5</button></div>
+                <div class="btn"><button  onclick="display(this)">6</button></div>
+                <div class="btn"><button  onclick="display(this)">+</button></div>
+            </div>
+
+
+            <div class="rows">
+                <div class="btn"><button  onclick="display(this)">1</button></div>
+                <div class="btn"><button  onclick="display(this)">2</button></div>
+                <div class="btn"><button  onclick="display(this)">3</button></div>
+                <div class="btn"><button  onclick="clr(this)">Clr</button></div>
+            </div>
+
+
+            <div class="rows">
+                <div class="btn" style="width: 28.7vw;"><button style="width: 28.7vw;" id="equal" onclick="solve()">Result</button></div>
+                <div class="btn"><button  onclick="backSpace(this)">BkSpc</button></div>
+            </div>
+
+
+        </div>
+    
+    
+    
+    </div>
+
+
+ <!---------------------------------------------------------------------------------------------------------------------------------------->   
+
+    <script>
+
+        function display(val)
+        {
+           let x = val.innerHTML;
+           document.getElementById('txt').value += x;
+        }
+
+        function clr(){
+            document.getElementById('txt').value = "";
+        }
+
+        function solve(){
+            let x = document.getElementById('txt').value;
+
+            let result = eval(x);
+            document.getElementById('txt').value = result;
+        }
+
+        function backSpace()
+        {
+            // Here We used substr method which takes first argument as 'start' and second argument as 'length'
+            //
+           let val = document.getElementById('txt').value;
+           document.getElementById('txt').value = val.slice(0, val.length-1);
+        }
+
+
+        function isNumberKey(evt)
+      {
+         var charCode = (evt.which) ? evt.which : event.keyCode
+         if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+        
+         return true;
+
+      }
+
+
+    </script>
+
+
+</body>
+</html>

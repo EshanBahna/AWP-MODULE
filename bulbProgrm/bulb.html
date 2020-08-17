@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb</title>
+    <style>
+        html, body{
+            margin: 0;
+        }
+        #div1{
+            background:  linear-gradient(to right, rgb(59, 211, 21), rgb(34, 126, 231), rgb(158, 20, 135));
+            height: 100vh;
+        
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+        #div2{
+            border: solid black 2px;
+            margin-bottom: 10vh;
+            margin-top: 15vh;
+            height: 40vh;
+            width: 40vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #div3{
+            background: white;
+            border-radius: 40px;
+            width: 40vw;
+            height: 8vh;
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+            padding-right: 15px;
+            justify-content: space-between;
+    
+        }
+    </style>
+
+    <script>
+        function bulbOn()
+        {
+            document.getElementById('bulb').src = 'pic_bulbon.gif';
+        }
+
+        function bulboff(){
+            document.getElementById('bulb').src = 'pic_bulboff.gif';
+        }
+
+        
+    </script>
+
+</head>
+<body>
+
+    <div id="div1">
+        
+        <div id="div2">
+            <img id="bulb" src="pic_bulboff.gif" alt="">
+        </div>
+
+        <div id="div3">
+            <button id="on" type="button" onclick="bulbOn()">Turn On</button>
+            <button id="off" type="button" onclick="bulboff()">Turn Off</button>
+        </div>
+    </div>
+
+</body>
+</html>
