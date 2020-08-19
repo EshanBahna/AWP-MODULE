@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
+     crossorigin="anonymous">
+
+     <!--Google Fonts-->
+     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
+     <!--CSS LINK-->
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+     <!--Javascript-->
+     <script src="2.js"></script>
+
+     <link rel="stylesheet" href="styles.css">
+     
+     <title>Weather</title>
+
+
+</head>
+<body style="background: url(1.jpeg);">
+    
+    <div class="container-fluid">
+
+        <!--NavBar-->
+        <div class="row align-items-center" style="height: 10vh; background: rgba(0, 0, 0, 0.4);">
+            <div class="col-4 col-md-9 text-light">Weather</div>
+            <div class="col-3 col-md-1 text-light">Contact us</div>
+            <div class="col-3 col-md-1 text-light">About us</div>
+            <div class="col-2 col-md-1 text-light">Login</div>
+        </div>
+
+        <!--Middle Div-->  
+    </div>
+
+    <!--Middle Div-->
+    <div id="outer">
+        <div id="inner">
+            
+            <h1>Weather Info</h1>
+
+            <div style="display: flex; margin-top: 25px; margin-bottom: 40px;">
+                <input type="text" class="w3-input" id="txt" placeholder="Enter City name">
+                <button type="button" onclick="weather()">Check</button>
+            </div>
+
+            <div id="city-name"></div>
+
+                <div style="display: flex; margin-top: 20px;" id="info-block">
+                    <div><span class="info" style="font-weight: bold;">Temprature: </span><span class="info"></span></div>
+                    <div><span class="info" style="font-weight: bold;">Humidity: </span><span class="info"></span></div>
+                    <div><span class="info" style="font-weight: bold;">Pressure: </span><span class="info"></span></div>
+                </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>
