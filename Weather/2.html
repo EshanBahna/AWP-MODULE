@@ -11,7 +11,7 @@
      crossorigin="anonymous">
 
      <!--Google Fonts-->
-     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
 
      <!--CSS LINK-->
      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -44,19 +44,26 @@
     <div id="outer">
         <div id="inner">
             
-            <h1>Weather Info</h1>
+            <div style="display: flex;"><img src="cloudy.png" alt=""><h1>Weather Info</h1><img src="part_cloudy.png" alt=""></div>
 
             <div style="display: flex; margin-top: 25px; margin-bottom: 40px;">
                 <input type="text" class="w3-input" id="txt" placeholder="Enter City name">
                 <button type="button" onclick="weather()">Check</button>
             </div>
 
-            <div id="city-name"></div>
+            <div id="city-name">
+                <div></div>
+                <div style="font-size: 18px;"></div>
+            </div>
 
                 <div style="display: flex; margin-top: 20px;" id="info-block">
                     <div><span class="info" style="font-weight: bold;">Temprature: </span><span class="info"></span></div>
+                    <div><span class="info" style="font-weight: bold;">Feels Like: </span><span class="info"></span></div>
                     <div><span class="info" style="font-weight: bold;">Humidity: </span><span class="info"></span></div>
-                    <div><span class="info" style="font-weight: bold;">Pressure: </span><span class="info"></span></div>
+                    <div><span class="info" style="font-weight: bold;">Rain: </span><span class="info"></span></div>
+                    <div><span class="info" style="font-weight: bold;">Wind: </span><span class="info"></span></div>
+                    <div><span class="info" style="font-weight: bold;">Visibility: </span><span class="info"></span></div>
+                    
                 </div>
             
         </div>
