@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--W3 School-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Id Card</title>
+
+    <script src="1.js"></script>
+
+
+    <style>
+        input{
+            height: 5vh !important;
+            border: none !important;
+            border-bottom: solid 1px white !important ;
+            background: rgba(0, 0, 0, 0.0) !important;
+      
+        }
+
+        button{
+            border: none !important;
+            background: rgba(0, 0, 0, 0.0) !important;
+            font-size: 20px !important;
+            font-weight: bold !important;
+            color: white !important;
+
+        }
+        #insertimg{
+            height: 15vh;
+            width: 15vh;
+            border-radius: 50px;
+            border: 5px solid rgb(46, 104, 139);
+        }
+    </style>
+
+   
+</head>
+<body style="background: url(test1.jpg); background-attachment: fixed; background-repeat: no-repeat;">
+   
+   
+   <div class="container-fluid">
+
+        <div class="row justify-content-center mt-5">
+
+            <div class="col-12 col-md-6 rounded" style="height: 70vh; background: rgba(0, 0, 0, 0.3); box-shadow: 0px 20px 20px 0px palevioletred;">
+
+
+                <!--Identity Details-->
+                <div class="row justify-content-center mt-3">
+                    <div class="col-4"><h3 class="text-light">Identity Details</h3></div>
+                </div>
+
+                <!--User name-->
+                <div class="row justify-content-center mt-3">
+                    <div class="col-6"><label class="mb-0 text-light" for="uname">User name</label><input class="w3-input" type="text" id="uname"></div>
+                </div>
+
+
+                <!--Date of Birth-->
+                <div class="row justify-content-center mt-3">
+                    <div class="col-6"><label class="mb-0 text-light" for="dob">Date of Birth</label><input class="w3-input" type="date" id="dob"></div>
+                </div>
+
+                
+                <!--Blood Group-->
+                <div class="row justify-content-center mt-3">
+                    <div class="col-6"><label class="mb-0 text-light" for="bgrp">Blood group</label><input class="w3-input" type="text" id="bgrp"></div>
+                </div>
+
+
+                <!--Contact no-->
+                <div class="row justify-content-center mt-3">
+                    <div class="col-6"><label class="mb-0 text-light" for="contact">Contact no</label><input class="w3-input" type="number" id="contact"></div>
+                </div>
+
+
+                <!--Image-->
+                <div class="row justify-content-center mt-2">
+                    <div class="col-6"><label class="mb-0 mt-2 text-light" for="myimg">select image</label> <input class="w3-input" type="file" id="myimg" style="border-bottom: none !important; color: wheat;"></div>
+                </div>
+
+
+                <!--Submit-->
+                <div class="row justify-content-end mt-2">
+                    <div class="col-3"><button type="button" onclick="generateID()">generate</button></div>
+                </div>
+
+
+            </div>
+       
+        </div>
+    </div>
+
+
+
+
+<!--Dynamic Id Generate-->
+<div class="container-fluid">
+    
+    <div class="row justify-content-center mt-5 mb-5">
+
+        <div class="col-12 col-md-3 bg-light" style="height: 70vh;">
+
+          
+            <!--Image-->
+            <div class="row mt-5 ">
+                <div class="col-12 d-flex justify-content-center"><img src="test1.jpg" alt="..." id="insertimg"></div>
+            </div>
+            
+
+            <!--Name-->
+            <div class="row mt-2">
+                <div class="col-12 d-flex justify-content-center"><p>Eshan Bahna</p></div>
+            </div>
+
+
+            <!--ID Card-->
+            <div class="row m-0">
+                <div class="col-12 d-flex justify-content-center"><p class="m-1">ID :</p><p class="m-1">: 200240320037</p></div>
+            </div>
+
+            
+
+            <!--Date of Birth-->
+            <div class="row m-0">
+                <div class="col-12 d-flex justify-content-center"><p class="m-1">DOB :</p><p class="m-1">: 19/11/1996</p></div>
+            </div>
+
+            <!--Blood Group-->
+            <div class="row  mt-0">
+                <div class="col-12 d-flex justify-content-center"><p class="m-0">Blood Group :</p><p class="p-0">: A+</p></div>
+            </div>
+
+            <!--Contact No-->
+            <div class="row justify-content-start mt-2">
+                <div class="col-12 d-flex justify-content-center"><p class="m-0">Contact no:</p><p>7987624493</p></div>
+            </div>
+
+            <!--Expiry Date-->
+            <div class="row justify-content-start mt-2">
+                <div class="col-12 d-flex justify-content-center"><p class="m-0">Expiry on: <p><p>Feburary 2021</p></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>

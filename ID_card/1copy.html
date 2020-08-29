@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--W3 School-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Id Card</title>
+
+    <script src="1copy.js"></script>
+
+
+    <style>
+        input{
+            height: 5vh !important;
+            border: none !important;
+            border-bottom: solid 1px white !important ;
+            background: rgba(0, 0, 0, 0.0) !important;
+      
+        }
+
+        button{
+            border: none !important;
+            background: rgba(0, 0, 0, 0.0) !important;
+            font-size: 20px !important;
+            font-weight: bold !important;
+            color: white !important;
+
+        }
+        #idimg{
+            height: 100px;
+            width: 100px;
+            border-radius: 50px;
+            border: 5px solid rgb(46, 104, 139);
+        }
+
+        select{
+            background: rgba(0, 0, 0, 0.0) !important;
+        }
+
+        #ID-Wrapper{
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            padding-top: 40px;
+            margin-bottom: 50px;
+        }
+
+        #ID-Card{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            height: 50vh;
+            width: 15vw;
+            background: white;
+            padding: 0px;
+            border: outset 4px darkslategrey;
+            border-radius: 10px;
+            background: linear-gradient(to top, white 50%, #008CBA 50%);
+
+            visibility: hidden;
+        }
+        #img-container
+        {
+            height: 16vh;
+            width: 15vw;
+            margin: 0px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+        }
+        #info-table{
+            display: flex;
+            justify-content: center;
+            margin-top: 4px;
+        }
+        td{
+            font-size: 13px;
+        }
+        tr>td{
+            padding-right: 5px;
+        }
+    </style>
+
+   
+</head>
+<body style="background: url(test1.jpg); background-attachment: fixed; background-repeat: no-repeat;">
+   
+   
+   <div class="container-fluid">
+
+        <div class="row justify-content-center mt-5">
+
+            <div class="col-12 col-md-6 rounded" style="height: 80vh; background: rgba(0, 0, 0, 0.3); box-shadow: 0px 20px 20px 0px grey;">
+
+
+                <!--Identity Details-->
+                <div class="row justify-content-center mt-3">
+                    <div class="col-4"><h3 class="text-light">Identity Details</h3></div>
+                </div>
+
+                <!--User name-->
+                <div class="row justify-content-center mt-3">
+                    <div class="col-6"><label class="mb-0 text-light" for="uname">User name</label><input class="w3-input" type="text" id="uname" required></div>
+                </div>
+
+
+                <!--Date of Birth-->
+                <div class="row justify-content-center mt-3">
+                    <div class="col-6"><label class="mb-0 text-light" for="dob">Date of Birth</label><input class="w3-input" type="date" id="dob" required></div>
+                </div>
+
+                
+                <!--Blood Group-->
+                <div class="row justify-content-center mt-3">
+                    <div class="col-6"><label class="mb-0 text-light" for="bgrp">Blood group</label><select id="bgrp" class="w3-input">
+                        <option>A Positive</option>
+                        <option>A Negative</option>
+                        <option>A Unknown</option>
+                        <option>B Positive</option>
+                        <option>B Negative</option>
+                        <option>B Unknown</option>
+                        <option>AB Positive</option>
+                        <option>AB Negative</option>
+                        <option>AB Unknown</option>
+                        <option>O Positive</option>
+                        <option>O Negative</option>
+                        <option>O Unknown</option>
+                        <option>Unknown</option>
+                    </select></div>
+                </div>
+
+
+                <!--Contact no-->
+                <div class="row justify-content-center mt-3">
+                    <div class="col-6"><label class="mb-0 text-light" for="contact">Contact no</label><input class="w3-input" type="number" id="contact" required></div>
+                </div>
+
+
+                <!--Image-->
+                <div class="row justify-content-center mt-2 mb-2">
+                    <div class="col-6"><label class="mb-0 mt-2 text-light" for="myimg">select image</label> <input class="w3-input" type="file" id="myimg" style="border-bottom: none !important; color: wheat;"></div>
+                </div>
+
+
+                <!--Submit-->
+                <div class="row justify-content-end">
+                    <div class="col-3"><button type="button" onclick="generateID()">generate</button></div>
+                </div>
+
+
+            </div>
+       
+        </div>
+    </div>
+
+
+
+
+<!--Dynamic Id Generate-->
+
+<div id="ID-Wrapper">
+
+
+<div id="ID-Card">
+  
+    <!--ID Image-->
+    <div id="img-container">
+        <div><img src="test1.jpg" alt="..." id="idimg"></div>
+    </div>
+    
+    <!--Info Table-->
+    <div id="info-table">
+        <table>
+            <tr>
+                <td>Name :</td>
+                <td id="idname">Eshan Bahna</td>
+            </tr>
+
+            <tr>
+                <td>ID :</td>
+                <td id="idno">200240320037</td>
+            </tr>
+
+            <tr>
+                <td>DOB :</td>
+                <td id="iddob">19-11-1996</td>
+            </tr>
+
+            <tr>
+                <td>Blood :</td>
+                <td id="idblood">B+</td>
+            </tr>
+
+            <tr>
+                <td>Phone :</td>
+                <td id="idphone">7987624493</td>
+            </tr>
+
+        </table>
+    </div>
+
+</div>
+
+</div>
+
+</body>
+</html>
